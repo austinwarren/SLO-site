@@ -4,9 +4,17 @@ import { Send, CheckCircle2, AlertCircle } from 'lucide-react';
 export default function BookingForm() {
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState<string>("");
+  const formspreeId = import.meta.env.VITE_FORMSPREE_ID;
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    if (!formspreeId) {
+      setErrorMessage("Booking form is not configured yet. Please try again soon.");
+      setStatus('error');
+      return;
+    }
+
     setStatus('submitting');
     setErrorMessage("");
 
@@ -15,7 +23,7 @@ export default function BookingForm() {
     const data = Object.fromEntries(formData.entries());
 
     try {
-      const response = await fetch(`https://formspree.io/f/${import.meta.env.VITE_FORMSPREE_ID}`, {
+      const response = await fetch(`https://formspree.io/f/${formspreeId}`, {
         method: 'POST',
         headers: {
           'Accept': 'application/json',
