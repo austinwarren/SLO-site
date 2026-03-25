@@ -1,4 +1,5 @@
 import { Play } from 'lucide-react';
+import ScrollReveal from './ScrollReveal';
 
 export default function GalleryGrid() {
   const photos = [
@@ -33,11 +34,11 @@ export default function GalleryGrid() {
 
   return (
     <div className="space-y-32">
-      <section>
+      <ScrollReveal>
         <h2 className="font-display text-4xl text-white mb-16 text-center font-black tracking-tighter uppercase">PHOTO GALLERY</h2>
         <div className="columns-1 sm:columns-2 lg:columns-3 gap-8 space-y-8">
           {photos.map((src, i) => (
-            <div key={i} className="relative group overflow-hidden rounded-3xl shadow-2xl border border-white/10">
+            <ScrollReveal key={i} delay={(i % 6) * 0.04} className="relative group overflow-hidden rounded-3xl shadow-2xl border border-white/10">
               <img 
                 src={src} 
                 alt={`Gallery ${i}`} 
@@ -45,16 +46,16 @@ export default function GalleryGrid() {
                 referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
-            </div>
+            </ScrollReveal>
           ))}
         </div>
-      </section>
+      </ScrollReveal>
 
-      <section>
+      <ScrollReveal>
         <h2 className="font-display text-4xl text-white mb-16 text-center font-black tracking-tighter uppercase">VIDEO PERFORMANCES</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-          {videos.map((video) => (
-            <div key={video.id} className="group cursor-pointer">
+          {videos.map((video, index) => (
+            <ScrollReveal key={video.id} delay={index * 0.08} className="group cursor-pointer">
               <div className="relative aspect-video rounded-3xl overflow-hidden shadow-2xl mb-6 border border-white/10">
                 <img 
                   src={video.thumbnail} 
@@ -69,10 +70,10 @@ export default function GalleryGrid() {
                 </div>
               </div>
               <h3 className="font-sans font-bold text-lg text-white/80 text-center group-hover:text-white transition-colors uppercase tracking-tight">{video.title}</h3>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
-      </section>
+      </ScrollReveal>
     </div>
   );
 }

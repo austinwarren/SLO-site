@@ -2,6 +2,7 @@ import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Star, Music, Users } from 'lucide-react';
 import ShowCard from '../components/ShowCard';
+import ScrollReveal from '../components/ScrollReveal';
 
 export default function Home() {
   const coverImage = `${import.meta.env.BASE_URL}images/cover.jpg`;
@@ -63,30 +64,34 @@ export default function Home() {
 
       {/* Featured Show Section */}
       <section className="py-32 bg-neutral-950 border-y border-white/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <ScrollReveal className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-16 text-center">
             <h2 className="font-display text-4xl sm:text-6xl text-white mb-4 font-black tracking-tighter">CATCH THE LOVE LIVE</h2>
             <p className="font-sans text-white/40 max-w-md mx-auto">Experience the Orchestra magic at these upcoming public performances.</p>
           </div>
           
           <div className="grid grid-cols-1 gap-4 max-w-4xl mx-auto">
-            <ShowCard 
-              date="MAR 22, 2026" 
-              city="Portland, OR" 
-              venue="Crystal Ballroom" 
-            />
-            <ShowCard 
-              date="MAY 14, 2026" 
-              city="Seattle, WA" 
-              venue="The Crocodile" 
-            />
+            <ScrollReveal delay={0.08}>
+              <ShowCard 
+                date="MAR 22, 2026" 
+                city="Portland, OR" 
+                venue="Crystal Ballroom" 
+              />
+            </ScrollReveal>
+            <ScrollReveal delay={0.16}>
+              <ShowCard 
+                date="MAY 14, 2026" 
+                city="Seattle, WA" 
+                venue="The Crocodile" 
+              />
+            </ScrollReveal>
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* Quick Intro Section */}
       <section className="py-32 bg-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <ScrollReveal className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
             <div className="relative order-2 lg:order-1">
               <img 
@@ -125,7 +130,7 @@ export default function Home() {
               </Link>
             </div>
           </div>
-        </div>
+        </ScrollReveal>
       </section>
     </div>
   );

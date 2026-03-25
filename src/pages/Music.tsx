@@ -1,6 +1,6 @@
-import { motion } from 'motion/react';
 import { Music as MusicIcon, Play, Youtube, Disc } from 'lucide-react';
 import { Link } from 'react-router';
+import ScrollReveal from '../components/ScrollReveal';
 
 export default function PlaylistPage() {
   const playlists = [
@@ -45,20 +45,20 @@ export default function PlaylistPage() {
   return (
     <div className="py-20 bg-black min-h-screen text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-32"
-        >
+        <ScrollReveal className="text-center mb-32" distance={20}>
           <h1 className="font-display text-4xl sm:text-7xl text-white mb-6 font-black tracking-tighter uppercase">THE PLAYLIST</h1>
           <p className="font-sans text-lg sm:text-xl text-white/50 max-w-2xl mx-auto">
             Explore the evolution of the groove. From raw funk to polished disco, this is the soundtrack of the Orchestra.
           </p>
-        </motion.div>
+        </ScrollReveal>
 
         <div className="space-y-48">
           {playlists.map((section, index) => (
-            <section key={index} className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-20 items-center`}>
+            <ScrollReveal
+              key={index}
+              delay={index * 0.06}
+              className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-20 items-center`}
+            >
               <div className="lg:w-1/2 space-y-10">
                 <div className="flex items-center gap-6">
                   <div className="w-14 h-14 bg-white text-black rounded-2xl flex items-center justify-center shadow-2xl">
@@ -106,16 +106,12 @@ export default function PlaylistPage() {
                   </div>
                 </div>
               </div>
-            </section>
+            </ScrollReveal>
           ))}
         </div>
 
         {/* Bottom CTA */}
-        <motion.div 
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          className="mt-48 p-16 bg-white/5 border border-white/10 rounded-[4rem] text-center text-white relative overflow-hidden"
-        >
+        <ScrollReveal className="mt-48 p-16 bg-white/5 border border-white/10 rounded-[4rem] text-center text-white relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent pointer-events-none" />
           <h2 className="font-display text-4xl sm:text-6xl mb-8 relative z-10 font-black tracking-tighter uppercase">WANT TO HEAR MORE?</h2>
           <p className="font-sans text-white/50 mb-12 max-w-xl mx-auto relative z-10 text-lg">
@@ -126,7 +122,7 @@ export default function PlaylistPage() {
               VIEW SHOW DATES
             </Link>
           </div>
-        </motion.div>
+        </ScrollReveal>
       </div>
     </div>
   );
