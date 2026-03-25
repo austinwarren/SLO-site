@@ -1,6 +1,6 @@
+import { motion } from 'motion/react';
 import { History, Users, Heart, Zap } from 'lucide-react';
 import MemberCard from '../components/MemberCard';
-import ScrollReveal from '../components/ScrollReveal';
 
 export default function HistoryPage() {
   const members = [
@@ -83,15 +83,19 @@ export default function HistoryPage() {
   return (
     <div className="py-20 bg-black min-h-screen text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <ScrollReveal className="text-center mb-32" distance={20}>
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-center mb-32"
+        >
           <h1 className="font-display text-4xl sm:text-7xl text-white mb-6 font-black tracking-tighter uppercase">OUR STORY</h1>
           <p className="font-sans text-lg sm:text-xl text-white/50 max-w-2xl mx-auto">
             From humble beginnings to the biggest stages in the Northwest.
           </p>
-        </ScrollReveal>
+        </motion.div>
 
         {/* The Story */}
-        <ScrollReveal className="mb-48">
+        <section className="mb-48">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div className="space-y-8">
               <div className="inline-flex items-center gap-3 text-white/40 font-sans text-[10px] font-black tracking-[0.3em] mb-4 uppercase">
@@ -113,7 +117,7 @@ export default function HistoryPage() {
               <img src="https://picsum.photos/seed/hist2/600/800" alt="History 2" className="rounded-[2.5rem] shadow-2xl mt-12 border border-white/10 grayscale hover:grayscale-0 transition-all duration-700" referrerPolicy="no-referrer" />
             </div>
           </div>
-        </ScrollReveal>
+        </section>
 
         {/* Members */}
         <section className="mb-48">
@@ -123,19 +127,21 @@ export default function HistoryPage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
             {members.map((member, i) => (
-              <ScrollReveal
+              <motion.div
                 key={i}
-                delay={i * 0.05}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.1 }}
               >
                 <MemberCard {...member} />
-              </ScrollReveal>
+              </motion.div>
             ))}
           </div>
         </section>
 
         {/* Timeline & Influences */}
         <section className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <ScrollReveal className="bg-white/5 rounded-[3rem] p-12 shadow-xl border border-white/10">
+          <div className="bg-white/5 rounded-[3rem] p-12 shadow-xl border border-white/10">
             <h3 className="font-display text-3xl text-white mb-10 flex items-center gap-4 font-black tracking-tighter uppercase">
               <Zap className="text-white" /> MILESTONES
             </h3>
@@ -150,9 +156,9 @@ export default function HistoryPage() {
                 </div>
               ))}
             </div>
-          </ScrollReveal>
+          </div>
           
-          <ScrollReveal className="bg-white/5 rounded-[3rem] p-12 shadow-xl border border-white/10" delay={0.08}>
+          <div className="bg-white/5 rounded-[3rem] p-12 shadow-xl border border-white/10">
             <h3 className="font-display text-3xl text-white mb-10 flex items-center gap-4 font-black tracking-tighter uppercase">
               <Heart className="text-white" /> INFLUENCES
             </h3>
@@ -176,7 +182,7 @@ export default function HistoryPage() {
                 />
               </div>
             </div>
-          </ScrollReveal>
+          </div>
         </section>
       </div>
     </div>

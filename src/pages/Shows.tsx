@@ -1,26 +1,28 @@
+import { motion } from 'motion/react';
 import BookingForm from '../components/BookingForm';
-import ScrollReveal from '../components/ScrollReveal';
 
 export default function Booking() {
   return (
     <div className="py-20 bg-black min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <ScrollReveal className="text-center mb-20" distance={20}>
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-center mb-20"
+        >
           <h1 className="font-display text-4xl sm:text-6xl text-white mb-6 uppercase tracking-tight">BOOKING & PRESS</h1>
           <p className="font-sans text-lg sm:text-xl text-white/60 max-w-2xl mx-auto">
             Everything you need to bring the Orchestra to your stage. From high-res assets to our booking request form.
           </p>
-        </ScrollReveal>
+        </motion.div>
 
         {/* Booking & EPK Section */}
         <section id="booking" className="max-w-4xl mx-auto space-y-20">
           {/* Booking Form First */}
-          <ScrollReveal>
-            <BookingForm />
-          </ScrollReveal>
+          <BookingForm />
 
           {/* Press Kit Below */}
-          <ScrollReveal className="glass-card rounded-[3rem] p-8 sm:p-12 shadow-xl border-2 border-white/10 text-center" delay={0.08}>
+          <div className="glass-card rounded-[3rem] p-8 sm:p-12 shadow-xl border-2 border-white/10 text-center">
             <h2 className="font-display text-4xl text-white mb-4 uppercase">ELECTRONIC PRESS KIT</h2>
             <p className="font-sans text-white/70 mb-8 max-w-xl mx-auto">
               Need high-res photos, stage plots, or band bios for your event? Download our full Electronic Press Kit below.
@@ -43,7 +45,7 @@ export default function Booking() {
                 ))}
               </div>
             </div>
-          </ScrollReveal>
+          </div>
         </section>
       </div>
     </div>
