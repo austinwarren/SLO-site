@@ -4,6 +4,8 @@ import { ArrowRight, Star, Music, Users } from 'lucide-react';
 import ShowCard from '../components/ShowCard';
 
 export default function Home() {
+  const coverImage = `${import.meta.env.BASE_URL}images/cover.jpg`;
+
   return (
     <div className="flex flex-col bg-black text-white">
       {/* Hero Section */}
@@ -49,7 +51,7 @@ export default function Home() {
             >
               <div className="absolute -inset-4 bg-white/5 rounded-[3rem] blur-2xl -z-10" />
               <img 
-                src="/images/cover.jpg" 
+                src={coverImage}
                 alt="Satin Love Orchestra Band" 
                 className="rounded-[2.5rem] shadow-2xl border border-white/10 w-full aspect-square object-cover object-left"
                 referrerPolicy="no-referrer"
@@ -88,7 +90,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
             <div className="relative order-2 lg:order-1">
               <img 
-                src="/images/cover.jpg" 
+                src={coverImage}
                 alt="Band Performance" 
                 className="rounded-[2.5rem] shadow-2xl border border-white/10 w-full aspect-[4/5] object-cover object-left"
                 referrerPolicy="no-referrer"
