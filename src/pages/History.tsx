@@ -3,18 +3,9 @@ import { History, Users, Heart, Zap } from 'lucide-react';
 import MemberCard from '../components/MemberCard';
 
 export default function HistoryPage() {
-  const memberImages = import.meta.glob('../../assets/*.{jpg,jpeg,png}', {
-    eager: true,
-    import: 'default',
-  }) as Record<string, string>;
-
   const getMemberImage = (name: string) => {
     const firstName = name.split(' ')[0].toLowerCase();
-    const entry = Object.entries(memberImages).find(([filePath]) =>
-      filePath.split('/').pop()?.split('.')[0].toLowerCase() === firstName
-    );
-
-    return entry?.[1] ?? 'https://picsum.photos/seed/member-fallback/800/1000';
+    return `${import.meta.env.BASE_URL}images/${firstName}.jpg`;
   };
 
   const members = [
