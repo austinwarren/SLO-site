@@ -100,7 +100,7 @@ function RouteSeo() {
     const seo = routeSeo[pathname] ?? routeSeo['/'];
     const canonicalUrl = new URL(pathname, window.location.origin).toString();
     const imageUrl = new URL(
-      `${import.meta.env.BASE_URL}images/cover.jpg`,
+      `${import.meta.env.BASE_URL}images/home%20page/cover.jpg`,
       window.location.origin,
     ).toString();
 

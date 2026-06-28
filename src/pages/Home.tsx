@@ -4,7 +4,8 @@ import { ArrowRight, Star, Music, Users } from 'lucide-react';
 import ShowCard from '../components/ShowCard';
 
 export default function Home() {
-  const coverImage = `${import.meta.env.BASE_URL}images/cover.jpg`;
+  const coverImage = `${import.meta.env.BASE_URL}images/home%20page/cover.jpg`;
+  const coverImageSecondary = `${import.meta.env.BASE_URL}images/home%20page/cover2.jpg`;
 
   return (
     <div className="flex flex-col bg-black text-white">
@@ -71,14 +72,25 @@ export default function Home() {
           
           <div className="grid grid-cols-1 gap-4 max-w-4xl mx-auto">
             <ShowCard 
-              date="MAR 22, 2026" 
-              city="Portland, OR" 
-              venue="Crystal Ballroom" 
+              date="JULY 04"
+              city="Island Park, Springfield, OR"
+              venue="Lights of Liberty"
+              time="SLO 7:00-9:30 PM"
+              details="Satin Love Orchestra headlines the Lights of Liberty celebration, with fireworks immediately afterward. Shelley James & Agents of Unity open the evening from 5:00-6:00 PM."
             />
             <ShowCard 
-              date="MAY 14, 2026" 
-              city="Seattle, WA" 
-              venue="The Crocodile" 
+              date="JULY 10"
+              city="Oregon Zoo, Portland, OR"
+              venue="Zoo Nights"
+              time="6:30-8:30 PM"
+              details="A free summer evening set at the Oregon Zoo as part of the Zoo Nights concert series."
+            />
+            <ShowCard
+              date="AUG 09"
+              city="Emerald Park, Eugene, OR"
+              venue="Emerald Park Concert"
+              time="4:00-7:00 PM"
+              details="Free outdoor show in Eugene with three full hours of Satin Love Orchestra disco and funk in the park."
             />
           </div>
         </div>
@@ -90,7 +102,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
             <div className="relative order-2 lg:order-1">
               <img 
-                src={coverImage}
+                src={coverImageSecondary}
                 alt="Band Performance" 
                 className="rounded-[2.5rem] shadow-2xl border border-white/10 w-full aspect-[4/5] object-cover object-left"
                 referrerPolicy="no-referrer"

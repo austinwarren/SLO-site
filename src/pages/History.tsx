@@ -5,7 +5,7 @@ import MemberCard from '../components/MemberCard';
 export default function HistoryPage() {
   const getMemberImage = (name: string) => {
     const firstName = name.split(' ')[0].toLowerCase();
-    return `${import.meta.env.BASE_URL}images/${firstName}.jpg`;
+    return `${import.meta.env.BASE_URL}images/orchestra%20members/${firstName}.jpg`;
   };
 
   const members = [
