@@ -3,72 +3,86 @@ import { History, Users, Heart, Zap } from 'lucide-react';
 import MemberCard from '../components/MemberCard';
 
 export default function HistoryPage() {
+  const memberImages = import.meta.glob('../../assets/*.{jpg,jpeg,png}', {
+    eager: true,
+    import: 'default',
+  }) as Record<string, string>;
+
+  const getMemberImage = (name: string) => {
+    const firstName = name.split(' ')[0].toLowerCase();
+    const entry = Object.entries(memberImages).find(([filePath]) =>
+      filePath.split('/').pop()?.split('.')[0].toLowerCase() === firstName
+    );
+
+    return entry?.[1] ?? 'https://picsum.photos/seed/member-fallback/800/1000';
+  };
+
   const members = [
     {
       name: "Matthew Love",
       role: "Lead Vocals",
       //bio: "A veteran of the Portland funk scene, Marcus founded the band with a single mission: to make everyone dance.",
-      image: "https://picsum.photos/seed/member1/800/1000"
+      image: getMemberImage("Matthew Love")
     },
     {
       name: "Shelley James",
       role: "Vocals",
       //bio: "With a voice that can reach the stratosphere, Sarah brings the disco diva energy to every single performance.",
-      image: "https://picsum.photos/seed/member2/800/1000"
+      image: getMemberImage("Shelley James")
     },
     {
       name: "Rica Wright",
       role: "Vocals",
       //bio: "Leo's wah-wah pedal is his best friend. He's been studying the riffs of Nile Rodgers since he was ten.",
-      image: "https://picsum.photos/seed/member3/800/1000"
+      image: getMemberImage("Rica Wright")
     },
     {
       name: "Joe Webber",
       role: "Lead Guitar",
       //bio: "The heartbeat of the Orchestra. Benny's four-on-the-floor beat is the foundation of our disco sound.",
-      image: "https://picsum.photos/seed/member4/800/1000"
+      image: getMemberImage("Joe Webber")
     },
     {
       name: "Cal Coleman",
       role: "Bass",
       //bio: "The sharpest horn in the Northwest. Rick's high notes are the signature of our brass section.",
-      image: "https://picsum.photos/seed/member5/800/1000"
+      image: getMemberImage("Cal Coleman")
     },
     {
       name: "Owen Wright",
       role: "Keys",
       //bio: "Whether it's a smooth solo or a funky riff, Mike's sax brings the soul to the Satin Love sound.",
-      image: "https://picsum.photos/seed/member6/800/1000"
+      image: getMemberImage("Owen Wright")
     },
     {
       name: "Darren K",
       role: "Percussion",
       //bio: "The deep, brassy foundation of our horn section. Chris keeps the low end funky and tight.",
-      image: "https://picsum.photos/seed/member7/800/1000"
+      image: getMemberImage("Darren K")
     },
     {
       name: "Jason Palmer",
       role: "Drums",
       //bio: "Master of the ivory. Kevin's rhythmic comping and soulful solos are the glue of the band.",
-      image: "https://picsum.photos/seed/member8/800/1000"
+      image: getMemberImage("Jason Palmer")
     },
     {
       name: "Ross Warren",
       role: "Saxophone",
       //bio: "Bringing the cosmic disco sounds of the late 70s. Sylvia's textures take our music to another dimension.",
-      image: "https://picsum.photos/seed/member9/800/1000"
+      image: getMemberImage("Ross Warren")
     },
     {
       name: "Dana Heitman",
       role: "Trumpet",
       //bio: "Adding that essential Latin-funk flavor. Paul's polyrhythms keep the dance floor moving.",
-      image: "https://picsum.photos/seed/member10/800/1000"
+      image: getMemberImage("Dana Heitman")
     },
     {
       name: "Ryan Warren",
       role: "Trumpet",
       //bio: "One half of our powerhouse vocal duo. Heather's harmonies add that lush, polished disco sheen.",
-      image: "https://picsum.photos/seed/member11/800/1000"
+      image: getMemberImage("Ryan Warren")
     }
   ];
 
