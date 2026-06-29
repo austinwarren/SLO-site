@@ -119,11 +119,6 @@ export default function Home() {
                 MORE THAN JUST A <br />
                 <span className="text-neutral-500">COVER BAND</span>
               </h2>
-              <p className="mt-8 font-sans text-lg text-white/60 leading-relaxed">
-                We're a collective of musicians dedicated to the authentic preservation of the 70s sound.
-                From the deep bass grooves of Parliament-Funkadelic to the soaring harmonies of The Bee Gees,
-                we bring a high-energy, immersive experience that transcends a typical concert.
-              </p>
               <Link to="/history" className="mt-8 inline-flex items-center gap-2 font-bold text-sm text-white hover:text-neutral-400 transition-colors uppercase tracking-widest">
                 MEET THE BAND <Users size={18} />
               </Link>

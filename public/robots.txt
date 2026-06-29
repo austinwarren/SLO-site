@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://satinloveorchestra.com/sitemap.xml
+Sitemap: https://satinlove.com/sitemap.xml
