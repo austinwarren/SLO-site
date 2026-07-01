@@ -1,43 +1,49 @@
 import { motion } from 'motion/react';
-import { Music as MusicIcon, Play, Youtube, Disc } from 'lucide-react';
+import { Music as MusicIcon, Youtube, Disc } from 'lucide-react';
 import { Link } from 'react-router';
 
 export default function PlaylistPage() {
   const playlists = [
     {
-      era: "EARLY FUNK & SOUL (1970-1973)",
-      description: "The raw, gritty foundations of the groove. Deep basslines and tight horn sections.",
-      videoTitle: "Superstition (Live Rehearsal)",
+      era: "FUNK & GROOVE",
+      description: "The deep-pocket funk and soul songs that set the tone for the whole night.",
+      videoTitle: "Play That Funky Music (Live Performance)",
+      videoEmbedUrl: "https://www.youtube.com/embed/qSQpJJAYmLM",
+      videoWatchUrl: "https://www.youtube.com/watch?v=qSQpJJAYmLM",
       songs: [
+        "Play That Funky Music - Wild Cherry",
         "Superstition - Stevie Wonder",
-        "Get Up (I Feel Like Being a) Sex Machine - James Brown",
-        "Theme from Shaft - Isaac Hayes",
-        "Express Yourself - Charles Wright",
-        "Rock Steady - Aretha Franklin"
+        "Brick House - Commodores",
+        "Jungle Boogie - Kool & The Gang",
+        "Fire - Ohio Players"
       ]
     },
     {
-      era: "PEAK DISCO FEVER (1974-1977)",
-      description: "The glitter, the lights, and the four-on-the-floor beat that defined a generation.",
+      era: "DISCO CLASSICS",
+      description: "The glitter, the lights, and the timeless disco anthems everyone knows.",
       videoTitle: "Disco Inferno (Concert Clip)",
+      videoEmbedUrl: "https://www.youtube.com/embed/9VTX9GWXK8Y",
+      videoWatchUrl: "https://www.youtube.com/watch?v=9VTX9GWXK8Y",
       songs: [
-        "Stayin' Alive - Bee Gees",
-        "Le Freak - Chic",
-        "September - Earth, Wind & Fire",
         "Disco Inferno - The Trammps",
-        "That's the Way (I Like It) - KC & The Sunshine Band"
+        "September - Earth, Wind & Fire",
+        "Boogie Oogie Oogie - A Taste of Honey",
+        "Le Freak - Chic",
+        "Get Down Tonight - KC & The Sunshine Band"
       ]
     },
     {
-      era: "LATE 70s DANCE GROOVE (1978-1979)",
-      description: "Polished production and infectious melodies as disco met the dawn of the 80s.",
-      videoTitle: "Good Times (Studio Session)",
+      era: "DANCE FLOOR FAVORITES",
+      description: "Big singalong party songs that keep the dance floor packed all night.",
+      videoTitle: "Billie Jean (Live Performance)",
+      videoEmbedUrl: "https://www.youtube.com/embed/dc-kK_5D4xk",
+      videoWatchUrl: "https://www.youtube.com/watch?v=dc-kK_5D4xk",
       songs: [
-        "Good Times - Chic",
-        "Don't Stop 'Til You Get Enough - Michael Jackson",
+        "Billie Jean - Michael Jackson",
         "We Are Family - Sister Sledge",
-        "Boogie Wonderland - Earth, Wind & Fire",
-        "I Will Survive - Gloria Gaynor"
+        "I Will Survive - Gloria Gaynor",
+        "Ladies' Night - Kool & The Gang",
+        "YMCA - Village People"
       ]
     }
   ];
@@ -45,14 +51,14 @@ export default function PlaylistPage() {
   return (
     <div className="py-20 bg-black min-h-screen text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-32"
         >
           <h1 className="font-display text-4xl sm:text-7xl text-white mb-6 font-black tracking-tighter uppercase">THE PLAYLIST</h1>
-          <p className="font-sans text-lg sm:text-xl text-white/50 max-w-2xl mx-auto">
-            Explore the evolution of the groove. From raw funk to polished disco, this is the soundtrack of the Orchestra.
+          <p className="font-sans text-lg sm:text-xl text-white/50 max-w-3xl mx-auto">
+            Explore the music that keeps audiences dancing. From funk and disco to unforgettable dance-floor classics, these are the songs that define Satin Love Orchestra.
           </p>
         </motion.div>
 
@@ -66,7 +72,7 @@ export default function PlaylistPage() {
                   </div>
                   <h2 className="font-display text-3xl text-white font-black tracking-tighter uppercase">{section.era}</h2>
                 </div>
-                
+
                 <p className="font-sans text-lg text-white/60 leading-relaxed italic border-l-4 border-white/10 pl-6">
                   "{section.description}"
                 </p>
@@ -88,30 +94,39 @@ export default function PlaylistPage() {
               </div>
 
               <div className="lg:w-1/2 w-full">
-                <div className="group relative aspect-video rounded-[2.5rem] overflow-hidden shadow-2xl border border-white/10">
-                  <img 
-                    src={`https://picsum.photos/seed/era${index}/1200/675`} 
-                    alt={section.videoTitle} 
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale hover:grayscale-0"
-                    referrerPolicy="no-referrer"
-                  />
-                  <div className="absolute inset-0 bg-black/60 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center shadow-2xl mb-4 transform scale-90 group-hover:scale-100 transition-transform">
-                      <Play className="text-black ml-1" fill="currentColor" size={32} />
+                {section.videoEmbedUrl ? (
+                  <div className="rounded-[2.5rem] overflow-hidden shadow-2xl border border-white/10 bg-black">
+                    <div className="aspect-video">
+                      <iframe
+                        className="w-full h-full"
+                        src={section.videoEmbedUrl}
+                        title={section.videoTitle}
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerPolicy="strict-origin-when-cross-origin"
+                        allowFullScreen
+                      />
                     </div>
-                    <p className="text-white font-bold uppercase tracking-widest text-sm">{section.videoTitle}</p>
+                    <div className="flex items-center justify-between gap-4 px-6 py-5 bg-white/5 border-t border-white/10">
+                      <p className="font-sans font-bold text-white/85 uppercase tracking-tight">{section.videoTitle}</p>
+                      <a
+                        href={section.videoWatchUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center gap-2 text-[10px] font-black tracking-[0.2em] uppercase text-white/60 hover:text-white transition-colors"
+                      >
+                        <Youtube size={16} />
+                        Watch on YouTube
+                      </a>
+                    </div>
                   </div>
-                  <div className="absolute top-8 right-8 p-4 bg-black/40 backdrop-blur-md rounded-full border border-white/10">
-                    <Youtube className="text-white" size={24} />
-                  </div>
-                </div>
+                ) : null}
               </div>
             </section>
           ))}
         </div>
 
         {/* Bottom CTA */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           className="mt-48 p-16 bg-white/5 border border-white/10 rounded-[4rem] text-center text-white relative overflow-hidden"
