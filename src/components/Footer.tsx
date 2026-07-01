@@ -1,4 +1,4 @@
-import { Facebook, Mail } from 'lucide-react';
+import { Facebook, Instagram, Mail } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -13,7 +13,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-sans text-[10px] font-bold mb-8 tracking-[0.2em] uppercase text-white/40">CONTACT</h4>
+            <h4 className="font-sans text-[10px] font-bold mb-8 tracking-[0.2em] uppercase text-white/40">Connect</h4>
             <a href="mailto:sj@shelleyjames.com" className="flex items-center gap-3 text-sm font-bold hover:text-neutral-400 transition-colors">
               <Mail size={18} className="text-white/40" />
               sj@shelleyjames.com
@@ -22,20 +22,25 @@ export default function Footer() {
               href="https://www.facebook.com/satinloveorchestra"
               target="_blank"
               rel="noreferrer"
-              className="mt-5 inline-flex items-center gap-3 text-sm font-bold hover:text-neutral-400 transition-colors"
+              className="mt-5 flex items-center gap-3 text-sm font-bold hover:text-neutral-400 transition-colors"
             >
               <Facebook size={18} className="text-white/40" />
-              Message on Facebook
+              Facebook
+            </a>
+            <a
+              href="https://www.instagram.com/satinlove.orchestra/"
+              target="_blank"
+              rel="noreferrer"
+              className="mt-5 flex items-center gap-3 text-sm font-bold hover:text-neutral-400 transition-colors"
+            >
+              <Instagram size={18} className="text-white/40" />
+              Instagram
             </a>
           </div>
         </div>
-        
-        <div className="border-t border-white/5 pt-12 flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] font-bold uppercase tracking-widest text-white/30">
-          <p>© {new Date().getFullYear()} Satin Love Orchestra. All Rights Reserved.</p>
-          <div className="flex space-x-8">
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
-          </div>
+
+        <div className="border-t border-white/5 pt-12 flex justify-center md:justify-start text-[10px] font-bold uppercase tracking-widest text-white/30">
+          <p>&copy; {new Date().getFullYear()} Satin Love Orchestra. All Rights Reserved.</p>
         </div>
       </div>
     </footer>

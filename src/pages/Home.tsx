@@ -64,7 +64,7 @@ export default function Home() {
       </section>
 
       {/* Featured Show Section */}
-      <section className="py-32 bg-neutral-950 border-y border-white/5">
+      <section id="catch-the-love-live" className="py-32 bg-neutral-950 border-y border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-16 text-center">
             <h2 className="font-display text-4xl sm:text-6xl text-white mb-4 font-black tracking-tighter">CATCH THE LOVE LIVE</h2>
@@ -81,6 +81,7 @@ export default function Home() {
               flyerImage={julyFourthFlyer}
               flyerAlt="Lights of Liberty July 4, 2026 flyer featuring Satin Love Orchestra and Agents of Unity"
               ticketUrl="https://www.subutil.com/light-of-liberty-tickets/"
+              ticketLabel="View Event"
             />
             <ShowCard
               date="JULY 10"
@@ -88,6 +89,8 @@ export default function Home() {
               venue="Zoo Nights"
               time="6:30-8:30 PM"
               details="Summer evening set at the Oregon Zoo as part of the Zoo Nights concert series."
+              ticketUrl="https://shop.oregonzoo.org/events/55b2c755-d155-a0b2-5b72-51cea39df45e"
+              ticketLabel="View Event"
             />
             <ShowCard
               date="AUG 09"
@@ -96,6 +99,8 @@ export default function Home() {
               time="4:00-7:00 PM"
               badgeLabel="Free Show"
               details="Free outdoor show in Eugene with three full hours of Satin Love Orchestra disco and funk in the park."
+              ticketUrl="https://www.rrpark.org/2026-08-09-satin-love-orchestra"
+              ticketLabel="View Event"
             />
           </div>
         </div>

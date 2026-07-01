@@ -122,9 +122,9 @@ export default function PlaylistPage() {
             We're constantly adding new classics to our repertoire. Come see us live to experience the full Orchestra sound.
           </p>
           <div className="flex justify-center gap-6 relative z-10">
-            <Link to="/booking" className="px-12 py-5 bg-white text-black font-black text-xs tracking-widest uppercase rounded-full hover:bg-neutral-200 transition-all">
+            <a href={`${import.meta.env.BASE_URL}#catch-the-love-live`} className="px-12 py-5 bg-white text-black font-black text-xs tracking-widest uppercase rounded-full hover:bg-neutral-200 transition-all">
               VIEW SHOW DATES
-            </Link>
+            </a>
           </div>
         </motion.div>
       </div>

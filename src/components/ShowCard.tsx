@@ -11,6 +11,7 @@ interface ShowCardProps {
   flyerAlt?: string;
   badgeLabel?: string;
   ticketUrl?: string;
+  ticketLabel?: string;
 }
 
 export default function ShowCard({
@@ -23,6 +24,7 @@ export default function ShowCard({
   flyerAlt,
   badgeLabel,
   ticketUrl,
+  ticketLabel,
 }: ShowCardProps) {
   const [month, day] = date.split(' ');
   const [isFlyerOpen, setIsFlyerOpen] = useState(false);
@@ -88,7 +90,7 @@ export default function ShowCard({
                   rel="noreferrer"
                   className="mt-5 inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/5 px-5 py-3 font-sans text-[11px] font-black uppercase tracking-[0.2em] text-white transition-colors hover:bg-white hover:text-black sm:justify-start"
                 >
-                  Event Tickets <ExternalLink size={14} />
+                  {ticketLabel ?? 'Event Tickets'} <ExternalLink size={14} />
                 </a>
               ) : null}
             </div>
