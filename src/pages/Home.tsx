@@ -6,6 +6,7 @@ import ShowCard from '../components/ShowCard';
 export default function Home() {
   const coverImage = `${import.meta.env.BASE_URL}images/home%20page/cover.jpg`;
   const julyFourthFlyer = `${import.meta.env.BASE_URL}images/SLO%20JULY%204%202026%20POSTER.jpg`;
+  const audioTrack = `${import.meta.env.BASE_URL}audio/Love%20O'Clock.mp3`;
 
   return (
     <div className="flex flex-col bg-black text-white">
@@ -101,6 +102,24 @@ export default function Home() {
               ticketUrl="https://www.rrpark.org/2026-08-09-satin-love-orchestra"
               ticketLabel="View Event"
             />
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24 bg-black">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="font-display text-4xl sm:text-5xl text-white mb-4 font-black tracking-tighter">
+            HEAR SATIN LOVE ORCHESTRA
+          </h2>
+          <p className="font-sans text-white/50 text-lg mb-10 max-w-2xl mx-auto">
+            Experience the sound of Satin Love through one of our original songs.
+          </p>
+          <div className="bg-white/5 border border-white/10 rounded-[2rem] px-6 pt-4 pb-6 sm:px-8 sm:pt-5 sm:pb-8 shadow-2xl">
+            <p className="font-sans text-white font-bold text-lg mb-4">Love O&apos;Clock</p>
+            <audio controls className="w-full" preload="none">
+              <source src={audioTrack} type="audio/mpeg" />
+              Your browser does not support the audio element.
+            </audio>
           </div>
         </div>
       </section>

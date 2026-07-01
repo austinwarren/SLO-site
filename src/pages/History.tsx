@@ -80,7 +80,7 @@ export default function HistoryPage() {
   ];
 
   return (
-    <div className="py-20 bg-black min-h-screen text-white">
+    <div className="pt-20 pb-8 bg-black min-h-screen text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -126,7 +126,7 @@ export default function HistoryPage() {
         </section>
 
         {/* Members */}
-        <section className="mb-48">
+        <section className="mb-24">
           <div className="flex items-center gap-6 mb-16">
             <Users className="text-white" size={32} />
             <h2 className="font-display text-4xl text-white font-black tracking-tighter uppercase">THE ORCHESTRA</h2>
