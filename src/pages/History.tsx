@@ -1,8 +1,10 @@
 import { motion } from 'motion/react';
-import { History, Users, Heart, Zap } from 'lucide-react';
+import { History, Users } from 'lucide-react';
 import MemberCard from '../components/MemberCard';
 
 export default function HistoryPage() {
+  const coverImage = `${import.meta.env.BASE_URL}images/home%20page/cover4.jpg`;
+
   const getMemberImage = (name: string) => {
     const firstName = name.split(' ')[0].toLowerCase();
     return `${import.meta.env.BASE_URL}images/orchestra%20members/${firstName}.jpg`;
@@ -77,25 +79,17 @@ export default function HistoryPage() {
     }
   ];
 
-  const timeline = [
-    { year: "2020", event: "The Orchestra is formed in a basement in Portland." },
-    { year: "2021", event: "First sold-out show at The Doug Fir Lounge." },
-    { year: "2022", event: "West Coast 'Funk Train' Tour across 12 cities." },
-    { year: "2024", event: "Released first studio album 'Night at the Disco'." },
-    { year: "2025", event: "Voted 'Best Live Band' by Portland Music Weekly." }
-  ];
-
   return (
     <div className="py-20 bg-black min-h-screen text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-32"
         >
           <h1 className="font-display text-4xl sm:text-7xl text-white mb-6 font-black tracking-tighter uppercase">OUR STORY</h1>
           <p className="font-sans text-lg sm:text-xl text-white/50 max-w-2xl mx-auto">
-            From humble beginnings to the biggest stages in the Northwest.
+            Three decades of music, memories, and keeping the dance floor full.
           </p>
         </motion.div>
 
@@ -104,22 +98,29 @@ export default function HistoryPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div className="space-y-8">
               <div className="inline-flex items-center gap-3 text-white/40 font-sans text-[10px] font-black tracking-[0.3em] mb-4 uppercase">
-                <History size={16} /> THE BEGINNING
+                <History size={16} /> THE EARLY YEARS
               </div>
               <h2 className="font-display text-5xl text-white font-black tracking-tighter uppercase">BORN IN THE LOVE</h2>
               <p className="font-sans text-lg text-white/60 leading-relaxed">
-                Satin Love Orchestra started as a weekly jam session between four friends who shared a deep, 
-                unapologetic love for 1970s funk and disco. What began as a way to blow off steam quickly 
-                turned into a mission: to bring the authentic, high-fidelity sound of the disco era back to live audiences.
+                Since 1997, SATIN LOVE ORCHESTRA has been delivering an electrifying
+                celebration of music, dance, and pure 70s-inspired fun up and down the west coast.
+                This powerhouse 11-piece band ignites every stage with soaring vocals, blazing horns,
+                infectious grooves, and a high-octane show packed with the decade’s biggest hits.
+                From disco classics to rock anthems and soulful favorites,
+                Satin Love Orchestra keeps crowds dancing all night long.
               </p>
               <p className="font-sans text-lg text-white/60 leading-relaxed">
-                We don't just play the songs; we study the arrangements, the gear, and the vibe. 
-                Every show is a time machine.
+                On July 4, they bring their “discolicious” sensation to Lights of Liberty at
+                Island Park to celebrate 250 years of the USA. Come celebrate, dance, and Catch the Love!
               </p>
             </div>
-            <div className="grid grid-cols-2 gap-6">
-              <img src="https://picsum.photos/seed/hist1/600/800" alt="History 1" className="rounded-[2.5rem] shadow-2xl border border-white/10 transition-all duration-700" referrerPolicy="no-referrer" />
-              <img src="https://picsum.photos/seed/hist2/600/800" alt="History 2" className="rounded-[2.5rem] shadow-2xl mt-12 border border-white/10 transition-all duration-700" referrerPolicy="no-referrer" />
+            <div>
+              <img
+                src={coverImage}
+                alt="Satin Love Orchestra"
+                className="w-full rounded-[2.5rem] shadow-2xl border border-white/10 object-cover"
+                referrerPolicy="no-referrer"
+              />
             </div>
           </div>
         </section>
@@ -141,52 +142,6 @@ export default function HistoryPage() {
                 <MemberCard {...member} />
               </motion.div>
             ))}
-          </div>
-        </section>
-
-        {/* Timeline & Influences */}
-        <section className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <div className="bg-white/5 rounded-[3rem] p-12 shadow-xl border border-white/10">
-            <h3 className="font-display text-3xl text-white mb-10 flex items-center gap-4 font-black tracking-tighter uppercase">
-              <Zap className="text-white" /> MILESTONES
-            </h3>
-            <div className="space-y-10">
-              {timeline.map((item, i) => (
-                <div key={i} className="flex gap-8">
-                  <span className="font-sans font-black text-white/20 text-xl tracking-tighter">{item.year}</span>
-                  <div className="space-y-2 flex-grow">
-                    <div className="w-full h-px bg-white/5 mb-4" />
-                    <p className="font-sans font-bold text-white/70 text-lg tracking-tight">{item.event}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-          
-          <div className="bg-white/5 rounded-[3rem] p-12 shadow-xl border border-white/10">
-            <h3 className="font-display text-3xl text-white mb-10 flex items-center gap-4 font-black tracking-tighter uppercase">
-              <Heart className="text-white" /> INFLUENCES
-            </h3>
-            <div className="space-y-8">
-              <p className="font-sans text-xl text-white/50 italic leading-relaxed border-l-4 border-white/10 pl-8">
-                "Our sound is a cocktail of the greatest legends to ever touch a stage."
-              </p>
-              <div className="flex flex-wrap gap-3">
-                {['Chic', 'Earth, Wind & Fire', 'The Bee Gees', 'Parliament-Funkadelic', 'Donna Summer', 'Stevie Wonder', 'The Commodores', 'Sister Sledge'].map((artist) => (
-                  <span key={artist} className="px-5 py-2.5 bg-white/5 rounded-full font-sans font-bold text-[10px] text-white/60 shadow-sm border border-white/10 uppercase tracking-widest hover:bg-white hover:text-black transition-all cursor-default">
-                    {artist}
-                  </span>
-                ))}
-              </div>
-              <div className="pt-10">
-                <img 
-                  src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&q=80&w=800" 
-                  alt="Microphone" 
-                  className="rounded-[2rem] shadow-2xl opacity-20 hover:opacity-40 transition-opacity duration-700"
-                  referrerPolicy="no-referrer"
-                />
-              </div>
-            </div>
           </div>
         </section>
       </div>
