@@ -11,7 +11,7 @@ export default function Navbar() {
     { name: 'Playlist', path: '/playlist', icon: Music },
     { name: 'Booking', path: '/booking', icon: Calendar },
     { name: 'Gallery', path: '/gallery', icon: ImageIcon },
-    { name: 'History', path: '/history', icon: History },
+    { name: 'About', path: '/about', icon: History },
   ];
 
   return (

@@ -6,7 +6,7 @@ import Home from './pages/Home';
 import Music from './pages/Music';
 import Shows from './pages/Shows';
 import Gallery from './pages/Gallery';
-import History from './pages/History';
+import About from './pages/History';
 
 const routeSeo: Record<
   string,
@@ -40,12 +40,12 @@ const routeSeo: Record<
     keywords:
       'band gallery, live band photos, Portland band photos, Eugene band photos, Oregon music, disco band live, funk band live',
   },
-  '/history': {
-    title: 'History | Satin Love Orchestra Portland Eugene Oregon',
+  '/about': {
+    title: 'About | Satin Love Orchestra Portland Eugene Oregon',
     description:
       'Learn the story behind Satin Love Orchestra, a Portland and Eugene disco funk band dedicated to the spirit of live 70s music in Oregon.',
     keywords:
-      'band history, Portland band, Eugene band, Oregon band, disco funk band, 70s tribute band, live music Oregon',
+      'about satin love orchestra, Portland band, Eugene band, Oregon band, disco funk band, 70s tribute band, live music Oregon',
   },
 };
 
@@ -197,7 +197,8 @@ export default function App() {
             <Route path="/playlist" element={<Music />} />
             <Route path="/booking" element={<Shows />} />
             <Route path="/gallery" element={<Gallery />} />
-            <Route path="/history" element={<History />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/history" element={<About />} />
           </Routes>
         </main>
         <Footer />
