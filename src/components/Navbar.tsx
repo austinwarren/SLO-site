@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Music, Calendar, Image as ImageIcon, History, Home, Menu, X } from 'lucide-react';
+import { Calendar, Home, Image as ImageIcon, Menu, MicVocal, Music, X } from 'lucide-react';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 
@@ -11,7 +11,7 @@ export default function Navbar() {
     { name: 'Playlist', path: '/playlist', icon: Music },
     { name: 'Booking', path: '/booking', icon: Calendar },
     { name: 'Gallery', path: '/gallery', icon: ImageIcon },
-    { name: 'About', path: '/about', icon: History },
+    { name: 'About', path: '/about', icon: MicVocal },
   ];
 
   return (
