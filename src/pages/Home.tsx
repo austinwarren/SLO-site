@@ -1,11 +1,10 @@
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Star, Users } from 'lucide-react';
+import { ArrowRight, Star } from 'lucide-react';
 import ShowCard from '../components/ShowCard';
 
 export default function Home() {
   const coverImage = `${import.meta.env.BASE_URL}images/home%20page/cover.jpg`;
-  const coverImageSecondary = `${import.meta.env.BASE_URL}images/home%20page/cover2.jpg`;
   const julyFourthFlyer = `${import.meta.env.BASE_URL}images/SLO%20JULY%204%202026%20POSTER.jpg`;
 
   return (
@@ -102,32 +101,6 @@ export default function Home() {
               ticketUrl="https://www.rrpark.org/2026-08-09-satin-love-orchestra"
               ticketLabel="View Event"
             />
-          </div>
-        </div>
-      </section>
-
-      {/* Quick Intro Section */}
-      <section className="py-32 bg-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-stretch">
-            <div className="relative order-2 lg:order-1 min-h-[340px] lg:min-h-0">
-              <img
-                src={coverImageSecondary}
-                alt="Band Performance"
-                className="h-full w-full rounded-[2.5rem] border border-white/10 bg-neutral-950/60 object-contain p-4 shadow-2xl aspect-square lg:aspect-auto"
-                referrerPolicy="no-referrer"
-              />
-            </div>
-
-            <div className="order-1 lg:order-2 flex flex-col justify-center">
-              <h2 className="font-display text-5xl sm:text-6xl text-white leading-tight font-black tracking-tighter">
-                MORE THAN JUST A <br />
-                <span className="text-neutral-500">COVER BAND</span>
-              </h2>
-              <Link to="/history" className="mt-8 inline-flex items-center gap-2 font-bold text-sm text-white hover:text-neutral-400 transition-colors uppercase tracking-widest">
-                MEET THE BAND <Users size={18} />
-              </Link>
-            </div>
           </div>
         </div>
       </section>

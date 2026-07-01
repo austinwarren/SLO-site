@@ -2,27 +2,28 @@ import { Play } from 'lucide-react';
 
 export default function GalleryGrid() {
   const photos = [
+    'highEnergy.jpg',
+    'together.jpg',
+    'vancouver.jpg',
+    'redTie.jpg',
     'calDisco.jpg',
     'calMat.jpg',
     'country.jpg',
     'drums.jpg',
     'emeraldPark.jpg',
     'fly.jpg',
-    'graduate.jpg',
-    'highEnergy.jpg',
-    'hilton.jpg',
     'horns.jpg',
     'joe.jpg',
     'keys.jpg',
     'new years.jpg',
+    'newyears2.jpg',
+    'percussion.jpg',
     'ymcaFinale.jpg',
-    'redTie.jpg',
     'ross.jpg',
     'shelleyHilton.jpg',
     'singers.jpg',
     'tacobell.jpg',
     'valleyriverInn.jpg',
-    'vancouver.jpg',
   ];
 
   const photoBasePath = `${import.meta.env.BASE_URL}images/gallery/`;
@@ -43,7 +44,7 @@ export default function GalleryGrid() {
               <img 
                 src={`${photoBasePath}${filename.replace(/ /g, '%20')}`}
                 alt={`Satin Love Orchestra gallery photo ${i + 1}`}
-                className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-110 grayscale hover:grayscale-0"
+                className="gallery-image w-full h-auto object-cover transition-transform duration-700 group-hover:scale-110 grayscale hover:grayscale-0"
                 referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
