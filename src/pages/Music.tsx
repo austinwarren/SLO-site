@@ -49,12 +49,12 @@ export default function PlaylistPage() {
   ];
 
   return (
-    <div className="py-20 bg-black min-h-screen text-white">
+    <div className="py-14 sm:py-20 bg-black min-h-screen text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-32"
+          className="text-center mb-16 sm:mb-32"
         >
           <h1 className="font-display text-4xl sm:text-7xl text-white mb-6 font-black tracking-tighter uppercase">THE PLAYLIST</h1>
           <p className="font-sans text-lg sm:text-xl text-white/50 max-w-3xl mx-auto">
@@ -62,28 +62,28 @@ export default function PlaylistPage() {
           </p>
         </motion.div>
 
-        <div className="space-y-48">
+        <div className="space-y-20 sm:space-y-48">
           {playlists.map((section, index) => (
-            <section key={index} className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-20 items-center`}>
-              <div className="lg:w-1/2 space-y-10">
-                <div className="flex items-center gap-6">
+            <section key={index} className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-10 sm:gap-20 items-center`}>
+              <div className="lg:w-1/2 space-y-6 sm:space-y-10">
+                <div className="flex items-center gap-4 sm:gap-6">
                   <div className="w-14 h-14 bg-white text-black rounded-2xl flex items-center justify-center shadow-2xl">
                     <Disc className="animate-spin-slow" size={28} />
                   </div>
                   <h2 className="font-display text-3xl text-white font-black tracking-tighter uppercase">{section.era}</h2>
                 </div>
 
-                <p className="font-sans text-lg text-white/60 leading-relaxed italic border-l-4 border-white/10 pl-6">
+                <p className="font-sans text-lg text-white/60 leading-relaxed italic border-l-4 border-white/10 pl-4 sm:pl-6">
                   "{section.description}"
                 </p>
 
-                <div className="bg-white/5 rounded-[2.5rem] p-10 shadow-xl border border-white/10">
-                  <h3 className="font-sans text-[10px] font-black tracking-[0.3em] text-white/40 mb-8 flex items-center gap-3 uppercase">
+                <div className="bg-white/5 rounded-[2.5rem] p-6 sm:p-10 shadow-xl border border-white/10">
+                  <h3 className="font-sans text-[10px] font-black tracking-[0.3em] text-white/40 mb-6 sm:mb-8 flex items-center gap-3 uppercase">
                     <MusicIcon size={14} /> SETLIST HIGHLIGHTS
                   </h3>
-                  <div className="space-y-5">
+                  <div className="space-y-4 sm:space-y-5">
                     {section.songs.map((song, i) => (
-                      <div key={i} className="flex items-center gap-6 group cursor-default">
+                      <div key={i} className="flex items-center gap-4 sm:gap-6 group cursor-default">
                         <span className="font-sans font-black text-[10px] text-white/20 uppercase tracking-widest">{(i + 1).toString().padStart(2, '0')}</span>
                         <span className="font-sans font-bold text-white/80 group-hover:text-white transition-colors">{song}</span>
                         <div className="flex-grow border-b border-dashed border-white/5" />
@@ -129,11 +129,11 @@ export default function PlaylistPage() {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          className="mt-48 p-16 bg-white/5 border border-white/10 rounded-[4rem] text-center text-white relative overflow-hidden"
+          className="mt-20 sm:mt-48 p-8 sm:p-16 bg-white/5 border border-white/10 rounded-[3rem] sm:rounded-[4rem] text-center text-white relative overflow-hidden"
         >
           <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent pointer-events-none" />
-          <h2 className="font-display text-4xl sm:text-6xl mb-8 relative z-10 font-black tracking-tighter uppercase">WANT TO HEAR MORE?</h2>
-          <p className="font-sans text-white/50 mb-12 max-w-xl mx-auto relative z-10 text-lg">
+          <h2 className="font-display text-4xl sm:text-6xl mb-6 sm:mb-8 relative z-10 font-black tracking-tighter uppercase">WANT TO HEAR MORE?</h2>
+          <p className="font-sans text-white/50 mb-8 sm:mb-12 max-w-xl mx-auto relative z-10 text-lg">
             We're constantly adding new classics to our repertoire. Come see us live to experience the full Orchestra sound.
           </p>
           <div className="flex justify-center gap-6 relative z-10">

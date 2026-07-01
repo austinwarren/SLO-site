@@ -64,9 +64,9 @@ export default function Home() {
       </section>
 
       {/* Featured Show Section */}
-      <section id="catch-the-love-live" className="py-32 bg-neutral-950 border-y border-white/5">
+      <section id="catch-the-love-live" className="py-20 sm:py-32 bg-neutral-950 border-y border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-16 text-center">
+          <div className="mb-10 sm:mb-16 text-center">
             <h2 className="font-display text-4xl sm:text-6xl text-white mb-4 font-black tracking-tighter">CATCH THE LOVE LIVE</h2>
             <p className="font-sans text-white/40 max-w-md mx-auto">Experience the Orchestra magic at these upcoming public performances.</p>
           </div>
@@ -106,12 +106,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-24 bg-black">
+      <section className="py-16 sm:py-24 bg-black">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-display text-4xl sm:text-5xl text-white mb-4 font-black tracking-tighter">
             HEAR SATIN LOVE ORCHESTRA
           </h2>
-          <p className="font-sans text-white/50 text-lg mb-10 max-w-2xl mx-auto">
+          <p className="font-sans text-white/50 text-lg mb-8 sm:mb-10 max-w-2xl mx-auto">
             Experience the sound of Satin Love through one of our original songs.
           </p>
           <div className="bg-white/5 border border-white/10 rounded-[2rem] px-6 pt-4 pb-6 sm:px-8 sm:pt-5 sm:pb-8 shadow-2xl">

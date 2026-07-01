@@ -3,12 +3,12 @@ import BookingForm from '../components/BookingForm';
 
 export default function Booking() {
   return (
-    <div className="py-20 bg-black min-h-screen">
+    <div className="py-14 sm:py-20 bg-black min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-20"
+          className="text-center mb-12 sm:mb-20"
         >
           <h1 className="font-display text-4xl sm:text-6xl text-white mb-6 uppercase tracking-tight">BOOKING & PRESS</h1>
           <p className="font-sans text-lg sm:text-xl text-white/60 max-w-2xl mx-auto">
@@ -17,12 +17,12 @@ export default function Booking() {
         </motion.div>
 
         {/* Booking & EPK Section */}
-        <section id="booking" className="max-w-4xl mx-auto space-y-20">
+        <section id="booking" className="max-w-4xl mx-auto space-y-12 sm:space-y-20">
           {/* Booking Form First */}
           <BookingForm />
 
           {/* Press Kit Below */}
-          <div className="glass-card rounded-[3rem] p-8 sm:p-12 shadow-xl border-2 border-white/10 text-center">
+          <div className="glass-card rounded-[3rem] p-6 sm:p-12 shadow-xl border-2 border-white/10 text-center">
             <h2 className="font-display text-4xl text-white mb-4 uppercase">ELECTRONIC PRESS KIT</h2>
             <p className="font-sans text-white/70 mb-8 max-w-xl mx-auto">
               Coming soon. Use the booking form above or contact us for media assets and press inquiries.

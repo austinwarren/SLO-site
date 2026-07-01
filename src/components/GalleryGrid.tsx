@@ -28,8 +28,8 @@ export default function GalleryGrid() {
   return (
     <div>
       <section>
-        <h2 className="font-display text-4xl text-white mb-16 text-center font-black tracking-tighter uppercase">PHOTO GALLERY</h2>
-        <div className="columns-1 sm:columns-2 lg:columns-3 gap-8 space-y-8">
+        <h2 className="font-display text-4xl text-white mb-10 sm:mb-16 text-center font-black tracking-tighter uppercase">PHOTO GALLERY</h2>
+        <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 sm:gap-8 space-y-4 sm:space-y-8">
           {photos.map((filename, i) => (
             <div key={i} className="relative group overflow-hidden rounded-3xl shadow-2xl border border-white/10">
               <img

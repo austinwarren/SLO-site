@@ -52,7 +52,7 @@ export default function BookingForm() {
 
   if (status === 'success') {
     return (
-      <div className="bg-white/5 rounded-[3rem] p-8 sm:p-12 shadow-2xl border border-green-500/30 text-center space-y-6">
+      <div className="bg-white/5 rounded-[3rem] p-6 sm:p-12 shadow-2xl border border-green-500/30 text-center space-y-5 sm:space-y-6">
         <div className="flex justify-center">
           <CheckCircle2 size={64} className="text-green-500" />
         </div>
@@ -70,12 +70,12 @@ export default function BookingForm() {
   }
 
   return (
-    <div className={`bg-white/5 rounded-[3rem] p-8 sm:p-12 shadow-2xl border transition-colors duration-500 ${status === 'error' ? 'border-orange-500/50' : 'border-white/10'}`}>
+    <div className={`bg-white/5 rounded-[3rem] p-6 sm:p-12 shadow-2xl border transition-colors duration-500 ${status === 'error' ? 'border-orange-500/50' : 'border-white/10'}`}>
       <h2 className="font-display text-4xl text-white mb-2 font-black tracking-tighter uppercase">BOOK THE ORCHESTRA</h2>
-      <p className="font-sans text-white/50 mb-8 text-sm">Ready to turn your event into a 70s extravaganza? Drop us a line!</p>
+      <p className="font-sans text-white/50 mb-6 sm:mb-8 text-sm">Ready to turn your event into a 70s extravaganza? Drop us a line!</p>
       
       {status === 'error' && (
-        <div className="mb-8 p-4 bg-orange-500/10 border border-orange-500/30 rounded-2xl flex items-center gap-4 text-orange-500">
+        <div className="mb-6 sm:mb-8 p-4 bg-orange-500/10 border border-orange-500/30 rounded-2xl flex items-center gap-4 text-orange-500">
           <AlertCircle size={24} className="shrink-0" />
           <p className="font-sans text-sm font-bold">{errorMessage}</p>
         </div>
@@ -83,7 +83,7 @@ export default function BookingForm() {
 
       <form 
         onSubmit={handleSubmit}
-        className="space-y-6"
+        className="space-y-5 sm:space-y-6"
       >
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           <div className="space-y-2">

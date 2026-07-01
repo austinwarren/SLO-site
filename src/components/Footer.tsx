@@ -2,9 +2,9 @@ import { Facebook, Instagram, Mail } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-white pt-24 pb-12 border-t border-white/10">
+    <footer className="bg-black text-white pt-16 sm:pt-24 pb-10 sm:pb-12 border-t border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 sm:gap-16 mb-10 sm:mb-16">
           <div>
             <h3 className="font-display text-2xl mb-6 font-black tracking-tighter">SATIN LOVE ORCHESTRA</h3>
             <p className="font-sans text-white/50 leading-relaxed text-sm">
@@ -13,7 +13,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-sans text-[10px] font-bold mb-8 tracking-[0.2em] uppercase text-white/40">Connect</h4>
+            <h4 className="font-sans text-[10px] font-bold mb-6 sm:mb-8 tracking-[0.2em] uppercase text-white/40">Connect</h4>
             <a href="mailto:sj@shelleyjames.com" className="flex items-center gap-3 text-sm font-bold hover:text-neutral-400 transition-colors">
               <Mail size={18} className="text-white/40" />
               sj@shelleyjames.com
@@ -39,7 +39,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/5 pt-12 flex flex-col items-center md:items-start gap-3 text-[10px] font-bold uppercase tracking-widest text-white/30">
+        <div className="border-t border-white/5 pt-8 sm:pt-12 flex flex-col items-center md:items-start gap-3 text-[10px] font-bold uppercase tracking-widest text-white/30">
           <p>&copy; {new Date().getFullYear()} Satin Love Orchestra. All Rights Reserved.</p>
           <p>Photography by David Putzier, unless otherwise noted.</p>
         </div>

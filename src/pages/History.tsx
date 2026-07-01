@@ -80,12 +80,12 @@ export default function HistoryPage() {
   ];
 
   return (
-    <div className="pt-20 pb-8 bg-black min-h-screen text-white">
+    <div className="pt-16 sm:pt-20 pb-6 sm:pb-8 bg-black min-h-screen text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-32"
+          className="text-center mb-16 sm:mb-32"
         >
           <h1 className="font-display text-4xl sm:text-7xl text-white mb-6 font-black tracking-tighter uppercase">OUR STORY</h1>
           <p className="font-sans text-lg sm:text-xl text-white/50 max-w-2xl mx-auto">
@@ -94,9 +94,9 @@ export default function HistoryPage() {
         </motion.div>
 
         {/* The Story */}
-        <section className="mb-48">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-            <div className="space-y-8">
+        <section className="mb-20 sm:mb-48">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-20 items-center">
+            <div className="space-y-6 sm:space-y-8">
               <div className="inline-flex items-center gap-3 text-white/40 font-sans text-[10px] font-black tracking-[0.3em] mb-4 uppercase">
                 <History size={16} /> THE EARLY YEARS
               </div>
@@ -126,12 +126,12 @@ export default function HistoryPage() {
         </section>
 
         {/* Members */}
-        <section className="mb-24">
-          <div className="flex items-center gap-6 mb-16">
+        <section className="mb-16 sm:mb-24">
+          <div className="flex items-center gap-4 sm:gap-6 mb-10 sm:mb-16">
             <Users className="text-white" size={32} />
             <h2 className="font-display text-4xl text-white font-black tracking-tighter uppercase">THE ORCHESTRA</h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-10">
             {members.map((member, i) => (
               <motion.div
                 key={i}
