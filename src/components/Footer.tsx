@@ -39,8 +39,9 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/5 pt-12 flex justify-center md:justify-start text-[10px] font-bold uppercase tracking-widest text-white/30">
+        <div className="border-t border-white/5 pt-12 flex flex-col items-center md:items-start gap-3 text-[10px] font-bold uppercase tracking-widest text-white/30">
           <p>&copy; {new Date().getFullYear()} Satin Love Orchestra. All Rights Reserved.</p>
+          <p>Photography by David Putzier, unless otherwise noted.</p>
         </div>
       </div>
     </footer>
