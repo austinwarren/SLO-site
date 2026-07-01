@@ -118,8 +118,8 @@ export default function HistoryPage() {
               </p>
             </div>
             <div className="grid grid-cols-2 gap-6">
-              <img src="https://picsum.photos/seed/hist1/600/800" alt="History 1" className="rounded-[2.5rem] shadow-2xl border border-white/10 grayscale hover:grayscale-0 transition-all duration-700" referrerPolicy="no-referrer" />
-              <img src="https://picsum.photos/seed/hist2/600/800" alt="History 2" className="rounded-[2.5rem] shadow-2xl mt-12 border border-white/10 grayscale hover:grayscale-0 transition-all duration-700" referrerPolicy="no-referrer" />
+              <img src="https://picsum.photos/seed/hist1/600/800" alt="History 1" className="rounded-[2.5rem] shadow-2xl border border-white/10 transition-all duration-700" referrerPolicy="no-referrer" />
+              <img src="https://picsum.photos/seed/hist2/600/800" alt="History 2" className="rounded-[2.5rem] shadow-2xl mt-12 border border-white/10 transition-all duration-700" referrerPolicy="no-referrer" />
             </div>
           </div>
         </section>
@@ -182,7 +182,7 @@ export default function HistoryPage() {
                 <img 
                   src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&q=80&w=800" 
                   alt="Microphone" 
-                  className="rounded-[2rem] shadow-2xl grayscale opacity-20 hover:opacity-40 transition-opacity duration-700"
+                  className="rounded-[2rem] shadow-2xl opacity-20 hover:opacity-40 transition-opacity duration-700"
                   referrerPolicy="no-referrer"
                 />
               </div>

@@ -12,7 +12,7 @@ export default function MemberCard({ name, role, bio = "", image }: MemberCardPr
         <img 
           src={image} 
           alt={name} 
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0"
+          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
           referrerPolicy="no-referrer"
         />
       </div>
