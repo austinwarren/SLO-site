@@ -48,10 +48,10 @@ export default function HistoryPage() {
       image: getMemberImage("Owen Wright")
     },
     {
-      name: "Darren Kromarek",
+      name: "Daren Kromarek",
       role: "Percussion",
       //bio: "The deep, brassy foundation of our horn section. Chris keeps the low end funky and tight.",
-      image: getMemberImage("Darren Kromarek")
+      image: getMemberImage("Daren Kromarek")
     },
     {
       name: "Jason Palmer",
