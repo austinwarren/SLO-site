@@ -30,10 +30,10 @@ export default function HistoryPage() {
       image: getMemberImage("Rica Wright")
     },
     {
-      name: "Joe Webber",
+      name: "Joe Weber",
       role: "Lead Guitar",
       //bio: "The heartbeat of the Orchestra. Benny's four-on-the-floor beat is the foundation of our disco sound.",
-      image: getMemberImage("Joe Webber")
+      image: getMemberImage("Joe Weber")
     },
     {
       name: "Cal Coleman",
@@ -48,10 +48,10 @@ export default function HistoryPage() {
       image: getMemberImage("Owen Wright")
     },
     {
-      name: "Darren K",
+      name: "Darren Kromarek",
       role: "Percussion",
       //bio: "The deep, brassy foundation of our horn section. Chris keeps the low end funky and tight.",
-      image: getMemberImage("Darren K")
+      image: getMemberImage("Darren Kromarek")
     },
     {
       name: "Jason Palmer",
